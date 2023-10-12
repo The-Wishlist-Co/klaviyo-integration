@@ -154,7 +154,7 @@ To make the content dynamic, you'll need to:
 To display the current price:
 
 1. Use the price merge field: ```{{ event.Items.0.customer.wishlist.wishlistItems.0.product.price.sale_price|default:'' }}```
-2. Remove ```{{ event.Items.0.customer.wishlist.wishlistItems.0``` and replace with ```item```.
+2. Remove ```event.Items.0.customer.wishlist.wishlistItems.0``` and replace with ```item```.
 3. The merge field is now ```{{ item.product.price.sale_price|default:'' }}```
 4. Remove the spaces after the opening ```{{``` and the closing ```}}```
 5. The merge field is now ```{{item.product.price.sale_price|default:''}}```
