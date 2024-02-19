@@ -1,5 +1,5 @@
 # About this guide
-This, guide shows you how to set up basic Flows in Klaviyo and how to merge the data coming from The Wishlist.
+This guide shows you how to set up basic Flows in Klaviyo and how to merge the data coming from The Wishlist.
 
 ## How integrating The Wishlist with Klaviyo improves your marketing
 The Wishlist Platform integrates with Klaviyo so you can market to The Wishlist customers to drive purchases and increase engagement with your best customers. 
