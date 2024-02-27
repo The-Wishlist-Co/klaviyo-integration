@@ -1,47 +1,48 @@
-# About this guide
-This guide shows you how to set up basic Flows in Klaviyo and how to merge the data coming from The Wishlist.
+# About this guide ##
+This guide illustrates the process of setting up and configuring the integration between The Wishlist platform and Klaviyo, including the establishment of basic Flows within Klaviyo that can be triggered by metrics from The Wishlist platform. 
 
-## How integrating The Wishlist with Klaviyo improves your marketing
-The Wishlist Platform integrates with Klaviyo so you can market to The Wishlist customers to drive purchases and increase engagement with your best customers. 
+Additionally, it covers utilising dynamic data sent from The Wishlist platform to Klaviyo for each event.
 
-The Wishlist emails typically have a higher than average open rate when compared to other types of campaigns. This is because your customers know they're getting information about products they're interested in.
+## How integrating The Wishlist with Klaviyo improves your marketing ##
 
-## What you need to use Klaviyo with The Wishlist
+Wishlist emails consistently achieve an outstanding open and conversion rate, outperforming other campaign types. 
 
-1. Set up Klaviyo as your default email platform within the The Wishlist Store Owner portal &ndash; specifying your API keys and configuring the types of notifications you want to use. 
-2. Create Klaviyo flows that will receive data from The Wishlist whenever a configured event occurs, and send the notification to the customer. You can use the full power of Klaviyo, including email throttling and extended customer treatments.
+This heightened engagement can be attributed to the personalised content, ensuring customers receive tailored information about products they're interested in.
 
-You can use the full power of Klaviyo, including email throttling and extended customer treatments.
+## What you need to use Klaviyo with The Wishlist ##
 
-> **When using Shopify** you'll need to set up Klaviyo to receive customer updates in real-time from Shopify
+1. Set up Klaviyo as your default email platform within the The Wishlist store owner console &ndash; specifying your API keys, and enabling and configuring the types of notifications you want to use. 
+2. Create Klaviyo flows that will receive data from The Wishlist whenever a configured event occurs, and send the notification to the customer. 
+
+You can use the full power of Klaviyo, including email and SMS, throttling and extended customer treatments.
 
 ## How to create the private key in Klaviyo ##
 
-This is the essential first step for integrating Klaviyo.
+This is the essential first step for integrating Klaviyo with The Wishlist platform.
 
-You need to create a private API key in Klaviyo. Then add it to the store owner portal in the Klaviyo integration screen. Here's how.
+You need to create a private API key in Klaviyo. Then add this new Private API key and your existing Klaviyo Public API Key into The Wishlist store owner console in the Klaviyo integration screen. Here's how.
 
-In Klaviyo click **Settings > Account > API keys**:
+1. In Klaviyo click **Settings > Account > API keys**:
 
 ![Account](docs/settings-account-API.png)
 
-Click **Create Private API Key**:
+2. Click **Create Private API Key**:
 
 ![Create private API key](docs/create-private-api-key.gif)
 
-Click **Full Access Key**:
+3. Click **Full Access Key**:
 
 ![Full Access Key](docs/full-access-key-button.png)
 
-Enter a **name** for the private API key and click the **Create** button.
+4. Enter a **name** for the private API key and click the **Create** button.
 
-Copy the private API key (without the first three characters **pk_**)
+5. Copy the private API key (without the first three characters **pk_**) and take note of the public API key
 
-Login to The Wishlist
+6. Login to The Wishlist
 
-Click **Integrations** and click **Activate** under Klaviyo. Now click **Configure**.
+7. Click **Integrations** and click **Activate** under Klaviyo. Now click **Configure**.
 
-Paste the private API key you created and click **Save**:
+Type the public API key into the first field. Paste the private API key you have created into the second field and click **Save**:
 
 ![paste API key](docs/save-private-API-key.gif)
 
@@ -49,9 +50,13 @@ Review your notification settings.
 
 You're now ready to set up integrated flows in Klaviyo.
 
-## The Wishlist flows
+## The Wishlist flows ## 
 
-The following flows can be set up within Klaviyo. Each flow will be triggered either by a customer wishlist update, price or inventory update or staff action.
+Each notification type from The Wishlist platform has a corresponding metric in Klaviyo that is automatically created after the above step. These metrics can be used to trigger flows in Klaviyo.  
+
+The following table lists each metric, a short description of why it's triggered, and some examples of the types of flows that are usually setup in Klaviyo to trigger a notification email or SMS to customers.
+
+Each metric will be triggered either by a customer wishlist update, price or inventory update change, or staff action.
 
 | Flow | Metric |Update |
 |-----:|---------------|---------------|
@@ -62,52 +67,52 @@ The following flows can be set up within Klaviyo. Each flow will be triggered ei
 |Price Drop |TWC_Price_ Drop |When an item has a price drop |
 |Reminder |TWC_Reminder |Sends a wishlist reminder according to the schedule you set|
 
-## Configuring notifications on the wishlist
+## Configuring notifications in The Wishlist Platform ##
 
 To use Klaviyo with The Wishlist, ensure that:
 
-+ The integration is initiated within The Wishlist store owner's portal
-+ Notifications are configured
++ The integration is initiated within The Wishlist store owner's console
++ Notifications are enabled and configured
 
 ![Settings](docs/configure-klaviyo-settings.png)
 
-## Setting up Klaviyo flows
+## Setting up Klaviyo flows ##
 
 Now it's time to set up the Klaviyo flows.
 
-Click **Flows > Create flow**:
+1. Click **Flows > Create flow**:
 
 ![Create flow](docs/create-flow-button.gif)
 
-Select **Create from scratch**:
+2. Select **Create from scratch**:
 
 ![Create from scratch](docs/flow-create-from-scratch.png)
 
-Name your flow (maybe "Add to Wishlist")
+3. Name your flow (maybe "Add to Wishlist")
 
-Click **Metric**:
+4. Click **Your Metrics** and then **API**:
 
-![Metric](docs/metric-trigger-setup-flow.png)
+![Metric](docs/metrics-api.png)
 
-Enter **TWC** in the search box and choose the trigger metric: 
+5. Select the **TWC** metric you would like to use to trigger your flow: 
 
-![TWC](docs/add-twc-example-trigger.png)
+![TWC](docs/Choose-metric-type.png)
 
-Click **Done**. Now it's time to create the email.
+6. Click **Save**. Now it's time to create the email.
 
 ### Create email ###
 
-Under **Actions**, click and drag Email across to underneath the flow:
+1. Under **Actions**, click and drag **Email** across to underneath the flow:
 
 ![Email](docs/email-drag-to-flow.gif)
 
-Click **Email** > **Configure content**:
+2. Click **Email** > **Configure content**:
 
 ![Configure](docs/email-configure-content.png)
 
-Enter the email name, subject line, preview text, sender name, sender email address.
+3. Enter the email name, subject line, preview text, sender name, sender email address.
 
-Click **Drag and Drop**:
+4. Click **Drag and Drop**:
 
 ![Drag and Drop](docs/email-drag-and-drop.png)
 
@@ -115,81 +120,101 @@ Now it's time to add the email content.
 
 ## Add email content ##
 
-You can include merge fields with your content and images. Click the **Source code icon** and select from the merge fields below.
+To include dynamic product information such as descriptions, prices, and product images in your Wishlist notification emails or SMS templates, you must add merge fields from the table below to each template:
 
 ![Source code](docs/source.png)
 
-### Merge fields to use ###
+### Wishlist and customer merge fields ###
 
-| Description | Merge field to include in your content |
-|-----|---------------|
-|First name|```{{ event.Items.0.customer.firstName&#124;default:" }}```|
-|Surname|```{{ event.Items.0.customer.lastName&#124;default:'' }}```|
-|Email|```{{ event.Items.0.customer.email&#124;default:'' }}```|
-|Product image|```{{ event.Items.0.customer.wishlist.wishlistItems.0.product.variant.image_link&#124;default:'' }}```|
-|Product title|```{{ event.Items.0.customer.wishlist.wishlistItems.0.product.title&#124;default:'' }}```|
-|Variant title|```{{ event.Items.0.customer.wishlist.wishlistItems.0.product.variant.title&#124;default:''}}```|
-|Compare_at price (original price)|```{{ event.Items.0.customer.wishlist.wishlistItems.0.product.price.price&#124;default:'' }}```|
-|Current price|```{{ event.Items.0.customer.wishlist.wishlistItems.0.product.price.sale_price&#124;default:'' }}```|
-|Stock level|```{{event.Items.0.customer.wishlist.wishlistItems.0.product.variant.attribute_group.marketing_attributes.attributes.inventoryQuantity.attribute_value&#124;default:'' }}```|
+#### Customer #### 
 
-Click the **Content** tab.
+| Merge field name | Merge field code |
+| ----- | --------------- |
+|First name| {{ event.Items.0.customer.firstName&#124;default:'' }} |
+|Surname|{{ event.Items.0.customer.lastName&#124;default:'' }}
+|Email| {{ event.Items.0.customer.email&#124;default:'' }} |
 
-Select a text or image box in the table.
+#### Dynamic product attributes ####
 
-In a **text box**, insert your **text** and **merge fields**:
-
-![Table content](docs/dynamic-table-add-content.png)
+| Merge field name | Merge field code |
+| ----- | --------------- |
+|Product variant image|{{item.product.variant.image_link&#124;default:''}}|
+|Product variant URL|{{item.product.variant.link&#124;default:''}}|
+|Product title|{{item.product.title&#124;default:''}}|
+|Product Variant title|{{item.product.variant.title&#124;default:''}}|
+|Product colour | {{item.product.variant.attribute_group.marketing_attributes.attributes.option1.attribute_value&#124;default:''}} |
+|Product size|{{item.product.variant.attribute_group.marketing_attributes.attributes.option2.attribute_value&#124;default:''}}|
+|Brand vendor|{{item.product.brand&#124;default:''}}|
+|Current price|{{item.product.price.sale_price&#124;default:''}}|
+|Compare_at price (original price)|{{item.product.price.price&#124;default:''}}|
+|Stock level| {{item.product.variant.attribute_group.marketing_attributes.attributes.inventoryQuantity.attribute_value&#124;default:''}} |
 
 ### Dynamic content ###
 
-Add the merge fields you wish to include in the emails. 
+The most effective method for integrating the dynamic product information sent by The Wishlist with each Wishlist-related notification in Klaviyo is by incorporating a Split content block into your email templates.
 
-To make the content dynamic, you'll need to:
+To incorporate a split content block and integrate the merge code for displaying your products and content, follow these steps:
 
-+ Remove **all the code that goes up to and includes the second 0**
-+ Replace this code with ```item```
+1. Under **Blocks** “click” **Split** and drag this onto your template where you would like the dynamic products to display:
 
-**Example**
-To display the current price:
+![Split](docs/Adding-split-content-block.png)
 
-1. Use the price merge field: ```{{ event.Items.0.customer.wishlist.wishlistItems.0.product.price.sale_price|default:'' }}```
-2. Remove ```event.Items.0.customer.wishlist.wishlistItems.0``` and replace with ```item```.
-3. The merge field is now ```{{ item.product.price.sale_price|default:'' }}```
-4. Remove the spaces after the opening ```{{``` and the closing ```}}```
-5. The merge field is now ```{{item.product.price.sale_price|default:''}}```
+2.	Determine which side of your split content block will contain the product information and which side will feature the product image:
 
-### Dynamic images ###
+![Split settings](docs/split-settings.png)
 
-Click the **image tab**.
+3. Select the left-hand side of the split and click **Image**, and then “click” **Browse Image Library**:
 
-In an **image box**, copy and paste the image merge field:
+![image links](docs/links.png)
 
-```{{item.product.variant.image_link|default:''}}```
+4. "Click" **Dynamic Image** and enter this code ```{{item.product.variant.image_link|default:''}} ``` into the field for the variant image URL:
 
-> You'll find the prefix on the merge field changes from ```event.Items.0.customer.wishlist.wishlistItems``` to ```item```
+5. Next, "click" **Save**
 
-## Using dynamic content tables ##
+![image links](docs/image-link.png)
 
-You can also insert dynamic tables. These can be combined blocks of content, such as product name, image and price.
+6.	Enter this code ```{{item.product.variant.link|default:''}}``` into the Link address field:
 
-### How to insert a dynamic table ###
+![PDP URL](docs/PDP-URL.png)
 
-Click the **Table Settings** tab:
+7.	“Click” the box on the right-hand side under **Column selector** and “click” **Text** under Column content:
 
-![Table settings](docs/table.png)
+![PDP URL](docs/Add-product-info.png)
 
-Copy and paste this code into the **Row collection** field:
+8.	Copy and Paste the relevant merge fields from the table above; in this example, we are going to include the Product name, size and current price:
 
-```event.Items.0.customer.wishlist.wishlistItems```
+![PDP URL](docs/product-merge-code-in-split.png)
 
-Copy and paste this text into the **Row alias** field:
+9. Click **Save**
 
-```item```
+To control the maximum number of products displayed in one of your email templates, you can use the below lines of code. 
 
-![Dynamic table](docs/dynamic-table-add-row-data.png)
+The first line needs to be inserted above your dynamic content and image block, and the second line of code needs to be inserted below your dynamic content and image block. 
 
-> **Using static tables?** Make sure you manually update the number in the code, to match the rest of the table entries. Everything else stays the same.
+The numeric value towards the end of the first line of code is the one you adjust to meet your requirements.  
+
+#### Above ####
+
+```{% for item in event.Items.0.customer.wishlist.wishlistItems|slice:":3" %}```
+
+#### Below ####
+
+```{% endfor %} ```
+
+To insert these lines of code, follow these steps:
+
+1.	Select the Text block under **Blocks** and drag it onto your template, positioning it directly above where you intend to insert your dynamic product copy and image block (split):
+
+![Block](docs/block.png)
+
+2.	Click the **Source Code** button, then paste the first line of code into the cell. Ensure to press "Enter" after pasting the code. Finally, click the Source code button again to see the code displayed on the template:
+
+![Above](docs/code-to-insert-above-the-split.png)
+
+3.	Once you've inserted your content and image block (split), follow the same steps again to add the second line of code directly below it:
+
+![Below](docs/code-to-insert-below-the-split.png)
+
 
 ## Preview email ##
 
