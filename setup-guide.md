@@ -122,8 +122,6 @@ Now it's time to add the email content.
 
 To include dynamic product information such as descriptions, prices, and product images in your Wishlist notification emails or SMS templates, you must add merge fields from the table below to each template:
 
-![Source code](docs/source.png)
-
 ### Wishlist and customer merge fields ###
 
 #### Customer #### 
