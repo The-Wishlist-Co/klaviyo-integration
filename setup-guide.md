@@ -11,7 +11,7 @@ This heightened engagement can be attributed to the personalised content, ensuri
 
 ## What you need to use Klaviyo with The Wishlist ##
 
-1. Set up Klaviyo as your default email platform within the The Wishlist store owner console &ndash; specifying your API keys, and enabling and configuring the types of notifications you want to use. 
+1. Set up Klaviyo as your default email platform within The Wishlist store owner console &ndash; specifying your API keys, and enabling and configuring the types of notifications you want to use. 
 2. Create Klaviyo flows that will receive data from The Wishlist whenever a configured event occurs, and send the notification to the customer. 
 
 You can use the full power of Klaviyo, including email and SMS, throttling and extended customer treatments.
